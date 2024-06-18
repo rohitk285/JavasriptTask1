@@ -110,6 +110,7 @@ function handleReset(){
 function handleGameOver(player){
     game_Over = true;
     isWin = true;
+    setTimeout(()=>{
     black_screen1.style.visibility = 'visible';
 
     if(player==='Player 2'){
@@ -124,7 +125,7 @@ function handleGameOver(player){
         winBoxText.style.color="black";
         winBoxText.innerText=`${player}`;
     }
-
+},1200);
     replay.addEventListener('click',()=>{
         window.location.reload();
     })
@@ -206,9 +207,5 @@ handlePause();
 handleResume();
 handleReset();
 
-//player 1 - blue
-//player 2 - red
-//winning condition
-//cells lighting up in the winning order - diagonal/straight
 //sound effects
 //undo button
