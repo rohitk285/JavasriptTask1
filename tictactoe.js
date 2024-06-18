@@ -29,7 +29,6 @@ function createCells() {  // creates cells
             cell.className = 'cell';
             cell.dataset.x = j;
             cell.dataset.y = i;
-            cell.id = `${3*i - 3 + j}`;
             gameboard.appendChild(cell);
         }
     }
